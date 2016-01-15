@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" id="lesson" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="Description" content="前端入门学习">
+<title>前端入门学习</title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+	#wrap{
+		max-width:1200px;
+		margin:0 auto;
+	}
+	#header{
+		height: 120px;
+		background-image: url('images/school_logo.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-color: #002d54;
+	}
+	#profile_head{
+		padding: 10px;
+		overflow: hidden;
+	}
+	#profile_head div{
+		float: right;
+		width: 100px;
+		height: 100px;
+		cursor: pointer;
+	}
+	#profile_head div img{
+		width: 100%;
+	}
+	#profile_head ul{
+		overflow: hidden;
+		list-style: none;
+	}
+	#profile_head ul li{
+		width: 50%;
+		float: left;
+		height: 30px;
+		line-height: 30px;
+		overflow: hidden;
+	}
+	#bigHeader{
+		display: none;
+		position: fixed;
+		left: 0;
+		right:0;
+		top:0;
+		bottom: 0;
+		background:rgba(0, 0, 0, 0.8);
+	}
+	#bigHeader img{
+		position: absolute;
+		left: 50%;
+		top:50%;
+		margin-left: -350px;
+		margin-top: -350px;
+	}
+	#profile_content dl dt{
+		background-color: #3498db;
+		color: #fff;
+		height: 30px;
+		line-height: 30px;
+		text-indent: 10px;
+	}
+	#profile_content dl dd{
+		height: 30px;
+		line-height: 30px;
+		text-indent: 10px;
+	}
+	@media screen and (max-width: 400px) {
+		#profile_head ul li{
+			width: 100%;
+			float: none;
+		}
+	   }
+</style>
+<script type="text/javascript">
+	function showBigHeader(){
+		document.getElementById('bigHeader').style.display = 'block';
+	}
+	function hideBigHeader(){
+		document.getElementById('bigHeader').style.display = 'none';
+	}
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header"></div>
+	<div id="content">
+		<div id="profile_head">
+			<div onclick="showBigHeader()">
+				<img src="images/header.jpeg" />
+			</div>
+			<ul>
+				<li><span>姓名：</span><strong>张三</strong></li>
+				<li><span>年龄：</span><strong>18</strong></li>
+				<li><span>手机：</span><strong>15888888888</strong></li>
+				<li><span>邮箱：</span><strong>11111111@qq.com</strong></li>
+				<li><span>地址：</span><strong>广州省广州市海珠区</strong></li>
+				<li><span>QQ：</span><strong>11111111</strong></li>
+			</ul>
+		</div>
+		<div id="profile_content">
+			<dl>
+				<dt>教育背景</dt>
+				<dd>2008-2012 <strong>华南师范大学</strong></dd>
+				<dd>2008-2012 <strong>华南师范大学</strong></dd>
+				<dd>2008-2012 <strong>华南师范大学</strong></dd>
+			</dl>
+			<dl>
+				<dt>工作经历</dt>
+				<dd>2012-2016 <strong>广州财略金融信息科技有限公司</strong></dd>
+				<dd>2012-2016 <strong>广州财略金融信息科技有限公司</strong></dd>
+				<dd>2012-2016 <strong>广州财略金融信息科技有限公司</strong></dd>
+			</dl>
+			<dl>
+				<dt>个人技能</dt>
+				<dd><strong>JavaScript</strong></dd>
+				<dd><strong>CSS</strong></dd>
+				<dd><strong>HTML</strong></dd>
+			</dl>
+			<dl>
+				<dt>自我评价</dt>
+				<dd><strong>负责</strong></dd>
+				<dd><strong>耐劳</strong></dd>
+				<dd><strong>聪明</strong></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<div id="bigHeader" onclick="hideBigHeader()">
+	<img src="images/header_big.jpeg" />
+</div>
+</body>
+</html>
